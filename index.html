@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruit CRM Sourcing Extension</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Section -->
+    <header class="header">
+      <h1>Recruit CRM Sourcing Extension</h1>
+      <button id="settings-btn" class="icon-btn">
+     <img src="settingimg.png" style="height: 20px;" width="20px" alt="Settings">
+     <span style="margin-left: 5px;">Settings</span>
+
+      </button>
+      <div class="theme-toggle">
+        <label for="theme-switch">Dark Mode</label>
+        <input type="checkbox" id="theme-switch">
+      </div>
+    </header>
+
+    <!-- Candidate Import Section -->
+    <main>
+      <section class="candidate-profile">
+         
+        <img src="proimg.jpg"  alt="Candidate Avatar" class="avatar">
+        <h2>Candidate Profile</h2>
+
+        <div class="profile-card">
+          <div class="profile-details">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="job-title" placeholder="Job Title">
+            <input type="text" id="company" placeholder="Company Name">
+          </div>
+        </div>
+        <button id="fetch-btn" class="secondary-btn">Fetch from LinkedIn</button>
+        <button id="save-btn" class="primary-btn">Save to Recruit CRM</button>
+        <p id="feedback" class="feedback"></p>
+      </section>
+      
+      <!-- Bulk Import Section -->
+      <section class="bulk-import">
+        <h2>Bulk Import</h2>
+        <div class="bulk-controls">
+          <input type="checkbox" id="select-all">
+          <label for="select-all">Select All</label>
+          <button id="import-all-btn" class="secondary-btn">Import All</button>
+        </div>
+        <div id="candidate-list" class="candidate-list">
+          <!-- Candidate items will be added dynamically -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
